@@ -8,7 +8,14 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="{% static 'hub/css/recommended_partners.css' %}">
 </head>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(document).ready(function() {
+	  $('table tbody').on('click', 'button.table-button-red', function() {
+		$(this).closest('tr').remove();
+	  });
+	});
+	</script>
 <body>
     <header>
 		<div class="logo">
